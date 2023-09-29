@@ -10,7 +10,6 @@ html, body {
 
 body {
   display: flex;
-  flex-wrap: wrap;
   font-family: Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -18,6 +17,16 @@ a {
   text-decoration: none;
 }
 
+hr {
+  width: 100%;
+  color: #6C757D;
+}
+
+@media all and (max-width: 900px) {
+  body {
+    flex-wrap: wrap;
+  }
+}
 nav {
   width: 20%;
   border-right: 1px solid #ddd;
@@ -85,6 +94,10 @@ nav ul li.items a:hover {
     padding: 8px 14px;
     border-radius: 6px;
   }
+  nav .nav-container .btn.active {
+    border: 4px solid rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.55);
+  }
   nav .nav-container .btn a {
     color: rgba(255, 255, 255, 0.55);
   }
@@ -119,14 +132,76 @@ nav ul li.items a:hover {
 main {
   flex-grow: 1;
   overflow: auto;
-  padding: 25px;
   height: 100%;
+}
+main section {
+  margin: 80px 0;
+  padding: 20px 35px;
+}
+main section .about-area {
+  display: flex;
+  flex-direction: column;
+}
+main section .about-area h1 {
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #343a40;
+}
+main section .about-area h1 span {
+  color: #bd5d38;
+}
+main section .about-area h6 {
+  color: #6c757d;
+  font-size: 18px;
+  font-weight: 500;
+}
+main section .about-area h6 span {
+  color: #bd5d38;
+  text-decoration: underline;
+}
+main section .about-area .about-text {
+  display: flex;
+  padding-top: 3.2rem;
+  color: #6c757d;
+  font-size: 20px;
+}
+main section .about-area ul {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  list-style-type: none;
+  gap: 1.4rem;
+  margin-top: 4rem;
+}
+main section .about-area ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #6c757d;
+  padding: 10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #6c757d;
+  margin-bottom: 52px;
+}
+main section .about-area ul li i {
+  color: #fff;
+  font-size: 24px;
 }
 @media all and (max-width: 900px) {
   main {
     height: calc(100% - 79px);
   }
   main.main-active {
-    height: calc(100% - 355px);
+    height: calc(100% - 400px);
+  }
+  main section {
+    margin: 40px 0;
+    padding: 10px 20px;
+  }
+  main section .about-area h1 {
+    font-size: 46px;
   }
 }/*# sourceMappingURL=style.css.map */
