@@ -19,7 +19,6 @@ a {
 }
 
 nav {
-  height: 100%;
   width: 20%;
   border-right: 1px solid #ddd;
   flex-shrink: 0;
@@ -43,36 +42,29 @@ nav img {
 }
 nav ul {
   width: 100%;
-  height: 100%;
 }
-nav ul li {
+nav ul li.items {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 5px;
   padding: 10px;
 }
-nav ul li a {
+nav ul li.items a {
   color: rgba(255, 255, 255, 0.55);
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
 }
-nav ul li a:hover {
+nav ul li.items a:hover {
   color: #fff;
-}
-nav ul li.btn {
-  display: none;
-}
-nav ul li.btn.hide i:before {
-  content: "\f00d";
 }
 @media all and (max-width: 900px) {
   nav {
-    height: -moz-fit-content;
-    height: fit-content;
     width: 100%;
+    position: sticky;
+    top: 0;
   }
   nav .nav-container {
     width: 100%;
@@ -96,15 +88,15 @@ nav ul li.btn.hide i:before {
   nav .nav-container .btn a {
     color: rgba(255, 255, 255, 0.55);
   }
-  nav ul li {
+  nav ul li.items {
     display: none;
   }
-  nav ul li.show {
+  nav ul li.items.show {
     display: flex;
     justify-content: start;
     align-items: center;
   }
-  nav ul li:hover::after {
+  nav ul li.items:hover::after {
     opacity: 0;
   }
   nav img {
@@ -129,4 +121,12 @@ main {
   overflow: auto;
   padding: 25px;
   height: 100%;
+}
+@media all and (max-width: 900px) {
+  main {
+    height: calc(100% - 79px);
+  }
+  main.main-active {
+    height: calc(100% - 355px);
+  }
 }/*# sourceMappingURL=style.css.map */

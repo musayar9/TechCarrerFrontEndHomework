@@ -5,5 +5,10 @@ main{
    height: 100%;
    
    
-
+   @media all and (max-width: 900px){
+       height: calc(100% - 79px);
+      &.main-active{
+           height: calc(100% - 355px);
+      }
+   }
 }
