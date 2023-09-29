@@ -52,21 +52,21 @@ nav img {
 nav ul {
   width: 100%;
 }
-nav ul li.items {
+nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 5px;
   padding: 10px;
 }
-nav ul li.items a {
+nav ul li a {
   color: rgba(255, 255, 255, 0.55);
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
 }
-nav ul li.items a:hover {
+nav ul li a:hover {
   color: #fff;
 }
 @media all and (max-width: 900px) {
@@ -101,15 +101,15 @@ nav ul li.items a:hover {
   nav .nav-container .btn a {
     color: rgba(255, 255, 255, 0.55);
   }
-  nav ul li.items {
+  nav ul li {
     display: none;
   }
-  nav ul li.items.show {
+  nav ul li.show {
     display: flex;
     justify-content: start;
     align-items: center;
   }
-  nav ul li.items:hover::after {
+  nav ul li:hover::after {
     opacity: 0;
   }
   nav img {
