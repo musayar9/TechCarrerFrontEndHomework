@@ -11,6 +11,11 @@ html, body {
 body {
   display: flex;
   flex-wrap: wrap;
+  font-family: Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 nav {
@@ -38,11 +43,24 @@ nav img {
 }
 nav ul {
   width: 100%;
+  height: 100%;
 }
-nav ul li.items {
+nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5px;
+  padding: 10px;
+}
+nav ul li a {
+  color: rgba(255, 255, 255, 0.55);
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+nav ul li a:hover {
+  color: #fff;
 }
 nav ul li.btn {
   display: none;
@@ -62,28 +80,31 @@ nav ul li.btn.hide i:before {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #fff;
   }
   nav .nav-container .person {
     flex: 1;
     color: white;
     font-size: 23px;
-    font-weight: 600;
+    font-weight: 400;
     cursor: default;
   }
-  nav ul li.items {
+  nav .nav-container .btn {
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    padding: 8px 14px;
+    border-radius: 6px;
+  }
+  nav .nav-container .btn a {
+    color: rgba(255, 255, 255, 0.55);
+  }
+  nav ul li {
     display: none;
   }
-  nav ul li.items.show {
+  nav ul li.show {
     display: flex;
     justify-content: start;
     align-items: center;
   }
-  nav ul li.items:hover {
-    border-radius: 5px;
-    box-shadow: inset 0 0 5px #33ffff, inset 0 0 10px #66ffff;
-  }
-  nav ul li.items:hover:after {
+  nav ul li:hover::after {
     opacity: 0;
   }
   nav img {

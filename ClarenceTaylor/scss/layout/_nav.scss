@@ -21,24 +21,43 @@ nav {
     border: 5px solid #ca7d60;
     display: block;
   }
+
   ul {
     width: 100%;
-  }
+    height: 100%;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      padding: 10px;
 
-  ul li.items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+      a {
+        color: rgba(255, 255, 255, 0.55);
+        transition: all 0.2s ease-in-out;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
 
-  ul li.btn {
-    display: none;
-  }
-  ul li.btn.hide i:before {
-    content: "\f00d";
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    li.btn {
+      display: none;
+
+      &.hide {
+        i:before {
+          content: "\f00d";
+        }
+      }
+    }
   }
   @media all and (max-width: 900px) {
-    height: fit-content;
+   
+height: fit-content;
     width: 100%;
 
     .nav-container {
@@ -47,32 +66,46 @@ nav {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid #fff;
-    }
+      // height: min-content;
 
-    .nav-container .person {
-      flex: 1;
-      color: white;
-      font-size: 23px;
-      font-weight: 600;
-      cursor: default;
-    }
+      .person {
+        flex: 1;
+        color: white;
+        font-size: 23px;
+        font-weight: 400;
+        cursor: default;
+      }
 
-    ul li.items {
-      display: none;
+      .btn {
+        border: 1px solid $nav-color;
+        padding: 8px 14px;
+        border-radius: 6px;
+        a {
+          color: $nav-color;
+        }
+      }
     }
-    ul li.items.show {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-    }
+    ul {
 
-    ul li.items:hover {
-      border-radius: 5px;
-      box-shadow: inset 0 0 5px #33ffff, inset 0 0 10px #66ffff;
-    }
-    ul li.items:hover:after {
-      opacity: 0;
+      li {
+        display: none;
+      
+        &.show {
+    
+    
+          display: flex;
+          justify-content: start;
+          align-items: center;
+         
+          
+        
+          
+        }
+
+        &:hover::after {
+          opacity: 0;
+        }
+      }
     }
 
     img {
