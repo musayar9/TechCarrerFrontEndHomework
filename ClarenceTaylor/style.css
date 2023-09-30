@@ -162,9 +162,11 @@ main section .about-area h6 span {
 }
 main section .about-area .about-text {
   display: flex;
-  padding-top: 3.2rem;
+  padding-top: 58px;
   color: #6c757d;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
 }
 main section .about-area ul {
   display: flex;
@@ -190,6 +192,58 @@ main section .about-area ul li i {
   color: #fff;
   font-size: 24px;
 }
+main section {
+  margin: 80px 0;
+  padding: 20px 35px;
+}
+main section .expArea {
+  display: flex;
+  flex-direction: column;
+}
+main section .expArea h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  color: #343a40;
+}
+main section .expArea .expContent {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+main section .expArea .expContent .expDetail {
+  flex-grow: 1;
+}
+main section .expArea .expContent .expDetail h3 {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #343A40;
+  letter-spacing: -0.1rem;
+}
+main section .expArea .expContent .expDetail .expHeading {
+  color: #6C757D;
+  text-transform: uppercase;
+  padding-top: 5px;
+  font-size: 24px;
+  letter-spacing: -0.1rem;
+}
+main section .expArea .expContent .expDetail div {
+  color: #758081;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+main section .expArea .expContent .expDetail p {
+  margin-top: 20px;
+  color: #758081;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+main section .expArea .expContent .expDate {
+  flex-shrink: 0;
+  color: #BD6558;
+  font-size: 16px;
+}
 @media all and (max-width: 900px) {
   main {
     height: calc(100% - 79px);
@@ -203,5 +257,31 @@ main section .about-area ul li i {
   }
   main section .about-area h1 {
     font-size: 46px;
+  }
+  main section {
+    margin: 40px 0;
+    padding: 10px 20px;
+  }
+  main section .expArea {
+    display: flex;
+    flex-direction: column;
+  }
+  main section .expArea h2 {
+    font-size: 36px;
+    color: #343a40;
+  }
+  main section .expArea .expContent {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  main section .expArea .expContent .expDetail h3 {
+    font-size: 28px;
+  }
+  main section .expArea .expContent .expDetail .expHeading {
+    font-size: 24px;
+  }
+  main section .expArea .expContent .expDate {
+    padding-top: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
