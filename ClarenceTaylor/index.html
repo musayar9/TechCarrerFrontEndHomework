@@ -158,7 +158,24 @@
           $(".btn").toggleClass("active");
           $("main").toggleClass("main-active");
         });
+ $("a").on("click", function (e) {
+    e.preventDefault();
+    var target = this.hash;
+   
+
+    $("html, body").animate(
+      {
+        scrollTop: $(target).offset().top
+      },
+      200,
+      function () {
+        window.location.hash = target; // Tarayıcı URL'sini güncelle
+      }
+    );
+  });
       });
+      
+      
     </script>
   </body>
 </html>
