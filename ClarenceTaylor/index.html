@@ -148,6 +148,48 @@
           </div>
         </div>
       </section>
+      <hr />
+
+      <!-- Skills -->
+      <section id="skills">
+        <div class="skillsContent">
+          <h2>Skills</h2>
+          <div class="skillsHeading">Programing Languagages & Tools</div>
+          <ul class="iconList">
+            <li><i class="fab fa-html5"></i></li>
+            <li><i class="fab fa-css3-alt"></i></li>
+            <li><i class="fab fa-js-square"></i></li>
+            <li><i class="fab fa-angular"></i></li>
+            <li><i class="fab fa-react"></i></li>
+            <li><i class="fab fa-node-js"></i></li>
+            <li><i class="fab fa-sass"></i></li>
+            <li><i class="fab fa-less"></i></li>
+            <li><i class="fab fa-wordpress"></i></li>
+            <li><i class="fab fa-gulp"></i></li>
+            <li><i class="fab fa-grunt"></i></li>
+            <li><i class="fab fa-npm"></i></li>
+          </ul>
+          <div class="skillsHeading">Workflow</div>
+          <ul class="skillsList fa-ul">
+             <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Agile Development & Scrum
+                        </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <script>
@@ -158,24 +200,21 @@
           $(".btn").toggleClass("active");
           $("main").toggleClass("main-active");
         });
- $("a").on("click", function (e) {
-    e.preventDefault();
-    var target = this.hash;
-   
+        //  $("a").on("click", function (e) {
+        //     e.preventDefault();
+        //     var target = this.hash;
 
-    $("html, body").animate(
-      {
-        scrollTop: $(target).offset().top
-      },
-      200,
-      function () {
-        window.location.hash = target; // Tarayıcı URL'sini güncelle
-      }
-    );
-  });
+        //     $("html, body").animate(
+        //       {
+        //         scrollTop: $(target).offset().top
+        //       },
+        //       200,
+        //       function () {
+        //         window.location.hash = target; // Tarayıcı URL'sini güncelle
+        //       }
+        //     );
+        //   });
       });
-      
-      
     </script>
   </body>
 </html>

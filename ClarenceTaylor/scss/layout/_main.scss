@@ -37,7 +37,7 @@ main {
         padding-top: 58px;
         color: #6c757d;
         font-size: 18px;
-         line-height: 1.5;
+        line-height: 1.5;
         letter-spacing: 0.5px;
       }
 
@@ -85,42 +85,79 @@ main {
       .expContent {
         display: flex;
         justify-content: space-between;
-         padding-top: 40px ;
-          .expDetail{
-            flex-grow: 1;
-              h3{
-                font-size: 32px;
-                text-transform: uppercase;
-                color:#343A40;
-                  letter-spacing: -0.1rem;
-              }
-              
-              .expHeading{
-                color: #6C757D;
-                text-transform: uppercase;
-                padding-top: 5px ;
-                font-size: 24px ;
-                 letter-spacing: -0.1rem;
-              }
-              div{
-                  color: #758081;
-                font-size: 16px;
-                line-height: 1.5;
-                letter-spacing: 0.5px;
-              }
-              p{
-                margin-top: 20px;
-                color: #758081;
-                font-size: 16px;
-                line-height: 1.5;
-                letter-spacing: 0.5px;
-              }
+        padding-top: 40px;
+        .expDetail {
+          flex-grow: 1;
+          h3 {
+            font-size: 32px;
+            text-transform: uppercase;
+            color: #343a40;
+            letter-spacing: -0.1rem;
           }
-          .expDate{
-            flex-shrink: 0;
-            color: #BD6558;
+
+          .expHeading {
+            color: #6c757d;
+            text-transform: uppercase;
+            padding-top: 5px;
+            font-size: 24px;
+            letter-spacing: -0.1rem;
+          }
+          div {
+            color: #758081;
             font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
           }
+          p {
+            margin-top: 20px;
+            color: #758081;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+          }
+        }
+        .expDate {
+          flex-shrink: 0;
+          color: #bd6558;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  section {
+    .skillsContent {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        text-transform: uppercase;
+        font-size: 42px;
+        color: #343a40;
+      }
+      .skillsHeading {
+        color: #6c757d;
+        text-transform: uppercase;
+        padding: 15px 0;
+        font-size: 24px;
+        letter-spacing: -0.1rem;
+      }
+      .iconList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        li {
+          margin: 20px 0;
+          i {
+            font-size: 46px;
+            color: #6c757d;
+          }
+        }
+      }
+      .skillsList {
+        li {
+          font-size: 18px;
+          color: #6c757d;
+        }
       }
     }
   }
@@ -141,35 +178,45 @@ main {
     }
 
     section {
-    // margin: 60px 0;
-     margin: 40px 0;
+      // margin: 60px 0;
+      margin: 40px 0;
       padding: 10px 20px;
 
-    .expArea {
-      display: flex;
-      flex-direction: column;
-      h2 {
-      
-        font-size: 36px;
-        color: #343a40;
-      }
-      .expContent {
+      .expArea {
         display: flex;
         flex-direction: column;
-         padding-top: 30px ;
-          .expDetail{
-              h3{
-                font-size:28px
-              }
-              .expHeading{
-                font-size: 24px;
-              }
+        h2 {
+          font-size: 36px;
+          color: #343a40;
+        }
+        .expContent {
+          display: flex;
+          flex-direction: column;
+          padding-top: 30px;
+          .expDetail {
+            h3 {
+              font-size: 28px;
+            }
+            .expHeading {
+              font-size: 24px;
+            }
           }
-          .expDate{
+          .expDate {
             padding-top: 20px;
           }
+        }
       }
     }
-  }
+
+    section {
+      .skillsContent {
+        .iconList {
+      
+         li{
+          margin: 5px 0;
+         }
+        }
+      }
+    }
   }
 }

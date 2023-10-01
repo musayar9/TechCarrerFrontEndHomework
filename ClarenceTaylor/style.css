@@ -14,6 +14,10 @@ body {
   font-family: Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+ol, ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -217,11 +221,11 @@ main section .expArea .expContent .expDetail {
 main section .expArea .expContent .expDetail h3 {
   font-size: 32px;
   text-transform: uppercase;
-  color: #343A40;
+  color: #343a40;
   letter-spacing: -0.1rem;
 }
 main section .expArea .expContent .expDetail .expHeading {
-  color: #6C757D;
+  color: #6c757d;
   text-transform: uppercase;
   padding-top: 5px;
   font-size: 24px;
@@ -242,8 +246,40 @@ main section .expArea .expContent .expDetail p {
 }
 main section .expArea .expContent .expDate {
   flex-shrink: 0;
-  color: #BD6558;
+  color: #bd6558;
   font-size: 16px;
+}
+main section .skillsContent {
+  display: flex;
+  flex-direction: column;
+}
+main section .skillsContent h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  color: #343a40;
+}
+main section .skillsContent .skillsHeading {
+  color: #6c757d;
+  text-transform: uppercase;
+  padding: 15px 0;
+  font-size: 24px;
+  letter-spacing: -0.1rem;
+}
+main section .skillsContent .iconList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main section .skillsContent .iconList li {
+  margin: 20px 0;
+}
+main section .skillsContent .iconList li i {
+  font-size: 46px;
+  color: #6c757d;
+}
+main section .skillsContent .skillsList li {
+  font-size: 18px;
+  color: #6c757d;
 }
 @media all and (max-width: 900px) {
   main {
@@ -284,5 +320,8 @@ main section .expArea .expContent .expDate {
   }
   main section .expArea .expContent .expDate {
     padding-top: 20px;
+  }
+  main section .skillsContent .iconList li {
+    margin: 5px 0;
   }
 }/*# sourceMappingURL=style.css.map */
