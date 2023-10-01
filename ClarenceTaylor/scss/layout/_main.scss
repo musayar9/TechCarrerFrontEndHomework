@@ -10,7 +10,7 @@ main {
     min-height: 100vh;
     margin: 80px 0;
     padding: 20px 35px;
-    .about-area {
+    .section-area {
       display: flex;
       flex-direction: column;
       h1 {
@@ -22,12 +22,17 @@ main {
           color: #bd5d38;
         }
       }
-
-      h6 {
+      h2 {
+        text-transform: uppercase;
+        font-size: 42px;
+        color: #343a40;
+      }
+      .heading {
         color: #6c757d;
-        font-size: 18px;
-        font-weight: 500;
-
+        text-transform: uppercase;
+        padding-top: 5px;
+        font-size: 24px;
+        letter-spacing: -0.1rem;
         span {
           color: #bd5d38;
           text-decoration: underline;
@@ -43,7 +48,7 @@ main {
         letter-spacing: 0.5px;
       }
 
-      ul {
+      .socialIcon {
         display: flex;
         align-items: center;
 
@@ -69,28 +74,12 @@ main {
           }
         }
       }
-    }
-  }
 
-  section {
-    max-width: 75rem;
-    min-height: 100vh;
-    margin: 80px 0;
-    padding: 20px 35px;
-
-    .expArea {
-      display: flex;
-      flex-direction: column;
-      h2 {
-        text-transform: uppercase;
-        font-size: 42px;
-        color: #343a40;
-      }
-      .expContent {
+      .section-content {
         display: flex;
         justify-content: space-between;
         padding-top: 40px;
-        .expDetail {
+        .section-detail {
           flex-grow: 1;
           h3 {
             font-size: 32px;
@@ -99,58 +88,35 @@ main {
             letter-spacing: -0.1rem;
           }
 
-          .expHeading {
-            color: #6c757d;
-            text-transform: uppercase;
-            padding-top: 5px;
-            font-size: 24px;
-            letter-spacing: -0.1rem;
-          }
-          div {
+          .detail-heading{
             color: #758081;
-            font-size: 16px;
+            font-size: 24px;
             line-height: 1.5;
-            letter-spacing: 0.5px;
+            letter-spacing: -0.1rem;
+            text-transform: uppercase;
           }
-          p {
+            div {
             margin-top: 20px;
             color: #758081;
             font-size: 16px;
             line-height: 1.5;
             letter-spacing: 0.5px;
           }
+          p {
+            
+            color: #758081;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+          }
         }
-        .expDate {
+        .section-date {
           flex-shrink: 0;
           color: #bd6558;
           font-size: 16px;
         }
       }
-    }
-  }
 
-  section {
-    max-width: 75rem;
-    min-height: 100vh;
-
-    margin: 80px 0;
-    padding: 20px 35px;
-    .skillsContent {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 60px;
-      h2 {
-        text-transform: uppercase;
-        font-size: 42px;
-        color: #343a40;
-      }
-      .skillsHeading {
-        color: #6c757d;
-        text-transform: uppercase;
-        padding: 15px 0;
-        font-size: 24px;
-        letter-spacing: -0.1rem;
-      }
       .iconList {
         display: flex;
         flex-wrap: wrap;
@@ -162,28 +128,18 @@ main {
             color: #6c757d;
           }
         }
+        
       }
       .skillsList {
+        margin-top: 15px;
         li {
           font-size: 18px;
           color: #6c757d;
         }
       }
-    }
-  }
-
-  section {
-    max-width: 75rem;
-    min-height: 100vh;
-    margin: 80px 0;
-    padding: 20px 35px;
-    .interestContent {
-      h2 {
-        text-transform: uppercase;
-        font-size: 42px;
-        color: #343a40;
-      }
-      .mt-40 {
+      
+      
+            .mt-40 {
         color: #6c757d;
 
         padding-top: 40px;
@@ -198,35 +154,23 @@ main {
         font-size: 18px;
         letter-spacing: -0.1rem;
       }
-    }
-
-    
-  }
-section {
-      max-width: 75rem;
-      min-height: 100vh;
-      margin: 80px 0;
-      padding: 20px 35px;
-      .awardsContent {
-        h2 {
-          text-transform: uppercase;
-          font-size: 42px;
-          color: #343a40;
-           letter-spacing: -0.1rem;
-        }
-        ul{
-          padding-top: 40px;
-          li{
-            color: #6c757d;
-            font-size: 18px;
-            i{
-              color:#FFC107;
-            }
-          
+      
+      .awardsList {
+        padding-top: 40px;
+        li {
+          color: #6c757d;
+          font-size: 18px;
+          i {
+            color: #ffc107;
           }
         }
       }
     }
+
+ 
+  }
+
+
   @media all and (max-width: 900px) {
     height: calc(100% - 79px);
     &.main-active {
@@ -235,79 +179,44 @@ section {
     section {
       margin: 60px 0;
       padding: 10px 20px;
-      .about-area {
+      .section-area{
         h1 {
           font-size: 46px;
-           letter-spacing: -0.1rem;
+          letter-spacing: -0.1rem;
         }
-      }
-    }
-
-    section {
-      // margin: 60px 0;
-      margin: 60px 0;
-      padding: 10px 20px;
-
-      .expArea {
-        display: flex;
-        flex-direction: column;
         h2 {
           font-size: 36px;
           color: #343a40;
         }
-        .expContent {
+          .section-content {
           display: flex;
           flex-direction: column;
           padding-top: 30px;
-          .expDetail {
+          .section-detail {
             h3 {
               font-size: 28px;
             }
-            .expHeading {
+            .detail-heading {
               font-size: 24px;
             }
           }
-          .expDate {
+          .section-date {
             padding-top: 20px;
           }
         }
-      }
-    }
-
-    section {
-      margin: 60px 0;
-      padding: 10px 20px;
-      .skillsContent {
-        .iconList {
+        
+         .iconList {
+         margin-bottom: 20px;
           li {
             margin: 5px 0;
             font-size: 14px;
           }
         }
       }
-    }
 
-    section {
-      margin: 60px 0;
-      padding: 10px 20px;
-      .interestContent {
-        h2 {
-          font-size: 36px;
-        
-        }
-      }
-    }
-    
-    section {
-         margin: 60px 0;
-      padding: 10px 20px;
-      .awardsContent {
-        h2 {
-  
-          font-size: 36px;
-     
-        }
-      }
+
+
+
     }
   }
 }

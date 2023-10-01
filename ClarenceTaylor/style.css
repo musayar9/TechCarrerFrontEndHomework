@@ -124,18 +124,6 @@ nav ul li a:hover {
   }
 }
 
-/*nav{
-    height: 25%;
-    // width: 250px;
-    width: 100%;
-    border: 1px solid #ddd;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    overflow: auto;
-
-}*/
 main {
   flex-grow: 1;
   overflow: auto;
@@ -147,29 +135,36 @@ main section {
   margin: 80px 0;
   padding: 20px 35px;
 }
-main section .about-area {
+main section .section-area {
   display: flex;
   flex-direction: column;
 }
-main section .about-area h1 {
+main section .section-area h1 {
   font-size: 72px;
   text-transform: uppercase;
   font-weight: 700;
   color: #343a40;
 }
-main section .about-area h1 span {
+main section .section-area h1 span {
   color: #bd5d38;
 }
-main section .about-area h6 {
-  color: #6c757d;
-  font-size: 18px;
-  font-weight: 500;
+main section .section-area h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  color: #343a40;
 }
-main section .about-area h6 span {
+main section .section-area .heading {
+  color: #6c757d;
+  text-transform: uppercase;
+  padding-top: 5px;
+  font-size: 24px;
+  letter-spacing: -0.1rem;
+}
+main section .section-area .heading span {
   color: #bd5d38;
   text-decoration: underline;
 }
-main section .about-area .about-text {
+main section .section-area .about-text {
   display: flex;
   padding-top: 58px;
   color: #6c757d;
@@ -177,14 +172,14 @@ main section .about-area .about-text {
   line-height: 1.5;
   letter-spacing: 0.5px;
 }
-main section .about-area ul {
+main section .section-area .socialIcon {
   display: flex;
   align-items: center;
   list-style-type: none;
   gap: 1.4rem;
   margin-top: 4rem;
 }
-main section .about-area ul li {
+main section .section-area .socialIcon li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,147 +191,89 @@ main section .about-area ul li {
   background: #6c757d;
   margin-bottom: 52px;
 }
-main section .about-area ul li i {
+main section .section-area .socialIcon li i {
   color: #fff;
   font-size: 24px;
 }
-main section {
-  max-width: 75rem;
-  min-height: 100vh;
-  margin: 80px 0;
-  padding: 20px 35px;
-}
-main section .expArea {
-  display: flex;
-  flex-direction: column;
-}
-main section .expArea h2 {
-  text-transform: uppercase;
-  font-size: 42px;
-  color: #343a40;
-}
-main section .expArea .expContent {
+main section .section-area .section-content {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
 }
-main section .expArea .expContent .expDetail {
+main section .section-area .section-content .section-detail {
   flex-grow: 1;
 }
-main section .expArea .expContent .expDetail h3 {
+main section .section-area .section-content .section-detail h3 {
   font-size: 32px;
   text-transform: uppercase;
   color: #343a40;
   letter-spacing: -0.1rem;
 }
-main section .expArea .expContent .expDetail .expHeading {
-  color: #6c757d;
-  text-transform: uppercase;
-  padding-top: 5px;
-  font-size: 24px;
-  letter-spacing: -0.1rem;
-}
-main section .expArea .expContent .expDetail div {
+main section .section-area .section-content .section-detail .detail-heading {
   color: #758081;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.5;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.1rem;
+  text-transform: uppercase;
 }
-main section .expArea .expContent .expDetail p {
+main section .section-area .section-content .section-detail div {
   margin-top: 20px;
   color: #758081;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.5px;
 }
-main section .expArea .expContent .expDate {
+main section .section-area .section-content .section-detail p {
+  color: #758081;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+main section .section-area .section-content .section-date {
   flex-shrink: 0;
   color: #bd6558;
   font-size: 16px;
 }
-main section {
-  max-width: 75rem;
-  min-height: 100vh;
-  margin: 80px 0;
-  padding: 20px 35px;
-}
-main section .skillsContent {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 60px;
-}
-main section .skillsContent h2 {
-  text-transform: uppercase;
-  font-size: 42px;
-  color: #343a40;
-}
-main section .skillsContent .skillsHeading {
-  color: #6c757d;
-  text-transform: uppercase;
-  padding: 15px 0;
-  font-size: 24px;
-  letter-spacing: -0.1rem;
-}
-main section .skillsContent .iconList {
+main section .section-area .iconList {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-main section .skillsContent .iconList li {
+main section .section-area .iconList li {
   margin: 20px 0;
 }
-main section .skillsContent .iconList li i {
+main section .section-area .iconList li i {
   font-size: 46px;
   color: #6c757d;
 }
-main section .skillsContent .skillsList li {
+main section .section-area .skillsList {
+  margin-top: 15px;
+}
+main section .section-area .skillsList li {
   font-size: 18px;
   color: #6c757d;
 }
-main section {
-  max-width: 75rem;
-  min-height: 100vh;
-  margin: 80px 0;
-  padding: 20px 35px;
-}
-main section .interestContent h2 {
-  text-transform: uppercase;
-  font-size: 42px;
-  color: #343a40;
-}
-main section .interestContent .mt-40 {
+main section .section-area .mt-40 {
   color: #6c757d;
   padding-top: 40px;
   font-size: 18px;
   letter-spacing: -0.1rem;
 }
-main section .interestContent .mt-20 {
+main section .section-area .mt-20 {
   color: #6c757d;
   padding-top: 15px;
   font-size: 18px;
   letter-spacing: -0.1rem;
 }
-main section {
-  max-width: 75rem;
-  min-height: 100vh;
-  margin: 80px 0;
-  padding: 20px 35px;
-}
-main section .awardsContent h2 {
-  text-transform: uppercase;
-  font-size: 42px;
-  color: #343a40;
-  letter-spacing: -0.1rem;
-}
-main section .awardsContent ul {
+main section .section-area .awardsList {
   padding-top: 40px;
 }
-main section .awardsContent ul li {
+main section .section-area .awardsList li {
   color: #6c757d;
   font-size: 18px;
 }
-main section .awardsContent ul li i {
-  color: #FFC107;
+main section .section-area .awardsList li i {
+  color: #ffc107;
 }
 @media all and (max-width: 900px) {
   main {
@@ -349,56 +286,33 @@ main section .awardsContent ul li i {
     margin: 60px 0;
     padding: 10px 20px;
   }
-  main section .about-area h1 {
+  main section .section-area h1 {
     font-size: 46px;
     letter-spacing: -0.1rem;
   }
-  main section {
-    margin: 60px 0;
-    padding: 10px 20px;
-  }
-  main section .expArea {
-    display: flex;
-    flex-direction: column;
-  }
-  main section .expArea h2 {
+  main section .section-area h2 {
     font-size: 36px;
     color: #343a40;
   }
-  main section .expArea .expContent {
+  main section .section-area .section-content {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
   }
-  main section .expArea .expContent .expDetail h3 {
+  main section .section-area .section-content .section-detail h3 {
     font-size: 28px;
   }
-  main section .expArea .expContent .expDetail .expHeading {
+  main section .section-area .section-content .section-detail .detail-heading {
     font-size: 24px;
   }
-  main section .expArea .expContent .expDate {
+  main section .section-area .section-content .section-date {
     padding-top: 20px;
   }
-  main section {
-    margin: 60px 0;
-    padding: 10px 20px;
+  main section .section-area .iconList {
+    margin-bottom: 20px;
   }
-  main section .skillsContent .iconList li {
+  main section .section-area .iconList li {
     margin: 5px 0;
     font-size: 14px;
-  }
-  main section {
-    margin: 60px 0;
-    padding: 10px 20px;
-  }
-  main section .interestContent h2 {
-    font-size: 36px;
-  }
-  main section {
-    margin: 60px 0;
-    padding: 10px 20px;
-  }
-  main section .awardsContent h2 {
-    font-size: 36px;
   }
 }/*# sourceMappingURL=style.css.map */
