@@ -1,3 +1,4 @@
+@import "../abstracts/variables";
 main {
   flex-grow: 1;
 
@@ -6,71 +7,64 @@ main {
   height: 100%;
 
   section {
-    max-width: 75rem;
-    min-height: 100vh;
-    margin: 80px 0;
-    padding: 20px 35px;
+    @extend %pagePosition;
     .section-area {
-      display: flex;
-      flex-direction: column;
+      @extend %pageLayoutCol;
       h1 {
-        font-size: 72px;
-        text-transform: uppercase;
+        @include font-size(72px);
+        text-transform: $text-uppercase;
         font-weight: 700;
-        color: #343a40;
+        color: $color;
         span {
-          color: #bd5d38;
+          color: $color-2;
         }
       }
       h2 {
-        text-transform: uppercase;
-        font-size: 42px;
-        color: #343a40;
+        text-transform: $text-uppercase;
+        @include font-size(42px);
+        color: $color;
       }
       .heading {
-        color: #6c757d;
-        text-transform: uppercase;
+        color: $color-4;
+        text-transform: $text-uppercase;
         padding-top: 5px;
-        font-size: 24px;
-        letter-spacing: -0.1rem;
+        @include paddingTop(5px);
+        @include font-size(24px);
+        letter-spacing: $letter-space;
         span {
-          color: #bd5d38;
+          color: $color-2;
           text-decoration: underline;
         }
       }
 
       .about-text {
         display: flex;
-        padding-top: 58px;
+        @include paddingTop(58px);
         color: #6c757d;
-        font-size: 18px;
-        line-height: 1.5;
-        letter-spacing: 0.5px;
+        @include font-size(18px);
+        @include text($lh: 1.5, $ls: $letter-space-2);
       }
 
       .socialIcon {
         display: flex;
         align-items: center;
-
         list-style-type: none;
         gap: 1.4rem;
         margin-top: 4rem;
 
         li {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @extend %pageLayout;
           border: 1px solid #6c757d;
           padding: 10px;
           width: 64px;
           height: 64px;
           border-radius: 50%;
-          background: #6c757d;
+          background: $color-4;
           margin-bottom: 52px;
 
           i {
-            color: #fff;
-            font-size: 24px;
+            color: $white;
+            @include font-size(24px);
           }
         }
       }
@@ -78,42 +72,38 @@ main {
       .section-content {
         display: flex;
         justify-content: space-between;
-        padding-top: 40px;
+        @include paddingTop(40px);
         .section-detail {
           flex-grow: 1;
           h3 {
-            font-size: 32px;
-            text-transform: uppercase;
-            color: #343a40;
-            letter-spacing: -0.1rem;
+            @include font-size(32px);
+            text-transform: $text-uppercase;
+            color: $color;
+            letter-spacing: $letter-space;
           }
 
-          .detail-heading{
-            color: #758081;
-            font-size: 24px;
-            line-height: 1.5;
-            letter-spacing: -0.1rem;
-            text-transform: uppercase;
+          .detail-heading {
+            color: $color-3;
+            @include font-size(24px);
+            @include text($lh: 1.5, $ls: $letter-space);
+            text-transform: $text-uppercase;
           }
-            div {
+          div {
             margin-top: 20px;
-            color: #758081;
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 0.5px;
+            color: $color-3;
+            @include font-size(16px);
+            @include text($lh: 1.5, $ls: $letter-space-2);
           }
           p {
-            
-            color: #758081;
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 0.5px;
+            color: $color-3;
+            @include font-size(16px);
+            @include text($lh: 1.5, $ls: $letter-space-2);
           }
         }
         .section-date {
           flex-shrink: 0;
-          color: #bd6558;
-          font-size: 16px;
+          color: $color-2;
+          @include font-size(16px);
         }
       }
 
@@ -125,51 +115,41 @@ main {
           margin: 20px 0;
           i {
             font-size: 46px;
-            color: #6c757d;
+            @include font-size(46px);
+            color: $color-4;
           }
         }
-        
       }
       .skillsList {
         margin-top: 15px;
         li {
-          font-size: 18px;
-          color: #6c757d;
+          @include font-size(18px);
+          color: $color-4;
         }
       }
-      
-      
-            .mt-40 {
-        color: #6c757d;
 
-        padding-top: 40px;
-        font-size: 18px;
-        letter-spacing: -0.1rem;
+      .mt-40 {
+        @include paddingTop(40px);
+        @extend %marginTopLayout;
       }
 
       .mt-20 {
-        color: #6c757d;
-
-        padding-top: 15px;
-        font-size: 18px;
-        letter-spacing: -0.1rem;
+        @include paddingTop(15px);
+        @extend %marginTopLayout;
       }
-      
+
       .awardsList {
-        padding-top: 40px;
+        @include paddingTop(40px);
         li {
-          color: #6c757d;
-          font-size: 18px;
+          color: $color-4;
+          @include font-size(18px);
           i {
-            color: #ffc107;
+            color: $color-5;
           }
         }
       }
     }
-
- 
   }
-
 
   @media all and (max-width: 900px) {
     height: calc(100% - 79px);
@@ -179,44 +159,50 @@ main {
     section {
       margin: 60px 0;
       padding: 10px 20px;
-      .section-area{
+      .section-area {
         h1 {
-          font-size: 46px;
-          letter-spacing: -0.1rem;
+          @include font-size(46px);
+          letter-spacing: $letter-space;
         }
         h2 {
-          font-size: 36px;
-          color: #343a40;
+          @include font-size(36px);
+          color: $color;
         }
-          .section-content {
+        .section-content {
           display: flex;
           flex-direction: column;
-          padding-top: 30px;
+          
+          @include paddingTop(30px);
           .section-detail {
             h3 {
-              font-size: 28px;
+              @include font-size(28px);
             }
             .detail-heading {
-              font-size: 24px;
+              @include font-size(24px);
             }
           }
           .section-date {
-            padding-top: 20px;
+            @include paddingTop(20px);
           }
         }
-        
-         .iconList {
-         margin-bottom: 20px;
+
+        .iconList {
+          
+          margin-bottom: 20px;
+          @include paddingTop(20px);
           li {
             margin: 5px 0;
-            font-size: 14px;
+            @include font-size(14px);
+          }
+        }
+
+        .awardsList {
+          li {
+            line-height: 1;
+            @include font-size(16px);
           }
         }
       }
-
-
-
-
     }
   }
 }

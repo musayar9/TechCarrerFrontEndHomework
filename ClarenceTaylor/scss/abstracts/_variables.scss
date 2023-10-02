@@ -1,3 +1,49 @@
-$font-stack: Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$emoji-font-stack: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@import "../abstracts/mixins";
+
+$font-stack: Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+$emoji-font-stack: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
 $nav-color: rgba(255, 255, 255, 0.55);
+$color: #343a40;
+$color-2: #bd5d38;
+$color-3: #758081;
+$color-4: #6c757d;
+$color-5: #ffc107;
+$color-6:#ca7d60;
+$color-7:#ddd;
+$letter-space: -0.1rem;
+$letter-space-2: 0.5px;
+$white: #fff;
+$text-uppercase: uppercase;
+
+/*inheritance*/
+
+%pagePosition {
+  max-width: 75rem;
+  min-height: 100vh;
+  margin: 80px 0;
+  padding: 20px 35px;
+}
+
+%pagePositionTwo {
+  margin: 60px 0;
+  padding: 10px 20px;
+}
+
+%pageLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%pageLayoutCol {
+  display: flex;
+  flex-direction: column;
+}
+
+%marginTopLayout {
+  color: $color-4;
+  @include font-size(18px);
+  letter-spacing: $letter-space;
+}

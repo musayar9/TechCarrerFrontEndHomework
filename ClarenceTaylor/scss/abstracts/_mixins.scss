@@ -1,1 +1,12 @@
-//boyut verme
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin paddingTop($size) {
+  padding-top: $size;
+}
+
+@mixin text($lh, $ls) {
+  line-height: $lh;
+  letter-spacing: $ls;
+}

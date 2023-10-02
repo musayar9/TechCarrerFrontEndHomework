@@ -1,7 +1,6 @@
 
 const btn = document.querySelector(".btn")
-const li = document.querySelectorAll("li");
-console.log(li);
+const li = document.querySelectorAll(".nav-link li");
 const main = document.querySelector("main")
 
 btn.addEventListener("click", ()=>{
@@ -16,7 +15,7 @@ main.classList.toggle("main-active")
 let value="";
 const items = document.querySelectorAll("a.items")
 
-const scrollToSection = (event) => {
+const scrollPosition = (event) => {
   event.preventDefault();
   removeActive();
   const targetId = event.currentTarget.getAttribute("href").substring(1);
@@ -34,5 +33,5 @@ const removeActive = () => {
 };
 
 items.forEach((item) => {
-  item.addEventListener("click", scrollToSection);
+  item.addEventListener("click", scrollPosition);
 });
