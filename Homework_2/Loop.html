@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <script>
+    // "Tech Career" metnini tersten yazdır
+
+      // var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
+
+      // var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
+
+      //1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu console yaz.
+
+      var techCareer = "Tech Career";
+      console.log(techCareer.split("").reverse().join(""));
+
+      var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+      var positive = 0;
+      var allPositive = [];
+      var maxNumber = [];
+      for (i = 0; i < numbers.length; i++) {
+        /*dizideki positif sayılar*/
+
+        if (numbers[i] > 0) {
+          positive += numbers[i];
+          allPositive.push(numbers[i]);
+        }
+        /*dizideki en büyük say*/
+        if (numbers[i] > maxNumber) {
+          maxNumber = numbers[i];
+        }
+      }
+      console.log("positive: " + positive);
+      console.log("allPositive: " + allPositive);
+      console.log("maxNumber:", maxNumber);
+
+      /*1 ile 50 arasında 3 ve 5 ile tam bölünebilenler*/
+      let threeCount = 0;
+      let threeNumber = "";
+      let fiveCount = 0;
+      let fiveNumber = "";
+      for (var i = 1; i <= 50; i++) {
+        if (i % 3 === 0) {
+          threeCount++;
+          threeNumber = threeNumber + " " + i;
+        }
+        if (i % 5 === 0) {
+          fiveCount++;
+          fiveNumber = fiveNumber + " " + i;
+        }
+      }
+      console.log("threeCount", threeCount);
+      console.log("threeNumber", threeNumber);
+      console.log("fiveCount", fiveCount);
+      console.log("fiveNumber", fiveNumber);
+    </script>
+</body>
+</html>
