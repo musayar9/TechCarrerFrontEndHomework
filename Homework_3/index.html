@@ -1015,11 +1015,12 @@
 // Ürünleri fiyata göre sırala (artan sıra)
 var cheapExpensive = products.sort((a, b) => a.price - b.price);
 
-// En ucuz ürünü al
+ // en pahalı ürünün adını console a yazdır
+ 
 const cheapest = cheapExpensive[0];
 console.log("En ucuz ürünün adı:", cheapest.name);
 
-// En pahalı ürünü al
+   //en ucuz ürünün adını console a yazdır
 const expensive = cheapExpensive[cheapExpensive.length - 1];
 console.log("En pahalı ürünün adı:", expensive.name);
 
