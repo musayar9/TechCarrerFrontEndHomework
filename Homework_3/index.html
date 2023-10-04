@@ -986,16 +986,16 @@
 
 
 
-  // Fiyatı 30 ile 100 arasında kaç ürün var?
+   //fiyatı 30 ile 100 arasında kaç adet ürün var?
   const amount = products.filter(item => item.price >= 30 && item.price <= 100);
   console.log(`Fiyatı 30 ile 100 arasında ${amount.length} adet ürün bulunmaktadır.`);
 
-  // İsmi 'a' harfi ile başlayan ürünleri console'a yazdır
+ //ismi a harfi ile başlayan ürünleri console a yazdır
   const startsProducts = products.filter(item => item.name.startsWith('a'));
  
   console.log('İsmi "a" harfi ile başlayan ürünler:',startsProducts);
 
-  // İsmi 'a' harfi ile biten ürünleri console'a yazdır
+//ismi a harfi ile BİTEN ürünleri console a yazdır
   const finishProducts = products.filter(item => item.name.endsWith('a'));
   console.log('İsmi "a" harfi ile biten ürünler:', finishProducts);
 
