@@ -987,7 +987,7 @@
 
 
    //fiyatı 30 ile 100 arasında kaç adet ürün var?
-  const amount = products.filter(item => item.price >= 30 && item.price <= 100);
+  const amount = products.filter(item => item.unitPrice >= 30 && item.unitPrice <= 100);
   console.log(`Fiyatı 30 ile 100 arasında ${amount.length} adet ürün bulunmaktadır.`);
 
  //ismi a harfi ile başlayan ürünleri console a yazdır
@@ -1013,7 +1013,7 @@
 
 
 // Ürünleri fiyata göre sırala (artan sıra)
-var cheapExpensive = products.sort((a, b) => a.price - b.price);
+var cheapExpensive = products.sort((a, b) => a.unitPrice - b.unitPrice);
 
  // en pahalı ürünün adını console a yazdır
  
