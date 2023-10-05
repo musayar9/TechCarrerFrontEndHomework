@@ -8,6 +8,7 @@ startButton.addEventListener("click", startRace);
 function startRace() {
   startButton.disabled = true;
   result.style.display = "none";
+     
   race();
 }
 
@@ -24,6 +25,7 @@ function race() {
         var random = Math.floor(Math.random() * 50);
         total = total + random;
         horse.style.marginLeft = total + "px";
+        horse.style.transition = "all 1s ease"
 
         if (parseInt(horse.style.marginLeft) >= finishLine - 100) {
           raceFinished = true;
@@ -32,6 +34,7 @@ function race() {
           startButton.disabled = false;
           startButton.textContent = "Yarışı Yeniden Başlat";
           result.style.display="block"
+          // horse.style.transition = "";
         }
       } 
     }, 600);
