@@ -34,7 +34,7 @@ function race() {
           startButton.disabled = false;
           startButton.textContent = "Yarışı Yeniden Başlat";
           result.style.display="block"
-          // horse.style.transition = "";
+         
         }
       } 
     }, 600);
