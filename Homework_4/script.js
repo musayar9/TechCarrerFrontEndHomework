@@ -21,11 +21,11 @@ function race() {
 
     const interval = setInterval(function () {
       if (!raceFinished) {
-        var random = Math.floor(Math.random() * 150);
+        var random = Math.floor(Math.random() * 50);
         total = total + random;
         horse.style.marginLeft = total + "px";
 
-        if (parseInt(horse.style.marginLeft) >= finishLine - 150) {
+        if (parseInt(horse.style.marginLeft) >= finishLine - 100) {
           raceFinished = true;
           clearInterval(interval);
           result.innerText = `${horse.id} Yarışı kazandı`;
