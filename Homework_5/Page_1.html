@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <button onclick="getProduct()">Get Products</button>
+    <ul>
+    
+    </ul>
+    
+    
+    
+    <script>
+        function getProduct(){
+        
+            axios.get('https://northwind.vercel.app/api/products')
+                .then(res=>{
+                
+                    const products = res.data
+                    
+                    
+                    products.forEach(product=>{
+                    
+                        const productList = document.createElement("li")
+                        productList.innerText = `${product.name} - ${product.unitPrice}`
+                        
+                        if(product.unitPrice >= 50){
+                            productList.style.backgroundColor= "red"
+                        }
+                        
+                        document.querySelector("ul").appendChild(productList)
+                        
+                       
+                    
+                    })
+                }).catch(err=>console.log(err))
+        }
+    </script>
+</body>
+</html>

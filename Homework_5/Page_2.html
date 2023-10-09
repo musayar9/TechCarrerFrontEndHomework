@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="" id="name" />
+    </div>
+    <div>
+      <label for="unitPrice">Unit Price</label>
+      <input type="number" name="unitPrice" id="unitPrice" />
+    </div>
+
+    <div>
+      <label for="unitsInStock">Stock</label>
+      <input type="number" name="" id="unitsInStock" />
+    </div>
+
+    <div>
+      <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <ul>
+    </ul>
+    <script>
+      function addProduct() {
+        const name = document.getElementById("name").value;
+        const unitPrice = document.getElementById("unitPrice").value;
+        const unitsInStock = document.getElementById("unitsInStock").value;
+        
+        const newProducts= {
+            name,
+            unitPrice,
+            unitsInStock
+        }
+
+        axios
+          .post("https://northwind.vercel.app/api/products", newProducts)
+          .then((res) => {
+          console.log(res.data);
+            const products = res.data;
+
+         
+              const productList = document.createElement("li");
+              productList.innerText = `Name: ${products.name} - UnitPrice: ${products.unitPrice} - Stock: ${products.unitsInStock}`
+
+              document.querySelector("ul").appendChild(productList);
+          
+          })
+          .catch((err) => console.log(err));
+      }
+    </script>
+  </body>
+</html>
