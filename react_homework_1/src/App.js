@@ -1,9 +1,15 @@
-import Product from "./Components/Product";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Navbar from "./Components/Navbar";
+import PageContent from "./Components/PageContent";
 
 function App() {
   return (
     <>
-      <Product />
+        <Navbar/>
+        <Header/>
+        <PageContent/>
+        <Footer/>
     </>
   );
 }
