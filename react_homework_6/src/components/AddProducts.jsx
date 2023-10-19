@@ -4,9 +4,7 @@ import * as Yup from "yup";
 import axios from "axios";
 const addProductValidation = Yup.object().shape({
   name: Yup.string().required("Name boş bırakılmaz"),
-  unitPrice: Yup.number().required(
-    "unitPrice  boş bırakılamaz"
-  ),
+  unitPrice: Yup.number().required("unitPrice  boş bırakılamaz"),
   unitsInStock: Yup.number()
     .positive("unitsInStock negatif değer alamaz")
     .required("unitsInStock boş bırakılmaz"),
@@ -23,14 +21,14 @@ const AddProducts = () => {
       unitsInStock: "",
       quantityPerUnit: "",
     },
-    validationSchema:addProductValidation,
+    validationSchema: addProductValidation,
     onSubmit: (values) => {
       console.log(values);
-       axios
-         .post("https://northwind.vercel.app/api/products", values)
-         .then((res) => {
-           console.log("Success!");
-         });
+      axios
+        .post("https://northwind.vercel.app/api/products", values)
+        .then((res) => {
+          console.log("Success!");
+        });
     },
   });
 
@@ -54,7 +52,7 @@ const AddProducts = () => {
         <div>
           <label htmlFor="">unitPrice:</label>
           <input
-            type="text"
+            type="number"
             name="unitPrice"
             onChange={formik.handleChange}
             value={formik.values.unitPrice}
@@ -68,7 +66,7 @@ const AddProducts = () => {
         <div>
           <label htmlFor="">unitsInStock:</label>
           <input
-            type="text"
+            type="number"
             name="unitsInStock"
             onChange={formik.handleChange}
             value={formik.values.unitsInStock}
